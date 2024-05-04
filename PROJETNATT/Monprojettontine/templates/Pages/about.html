@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+
+{% block contenu%}
+<style>
+
+/*   --  A propos --   */
+.form-cert{
+    background-color:#303C6C;
+}
+.formation{
+    width: 100%;
+    padding: 35px 10%;
+    height: 100%;
+}
+   
+.formation{
+    padding-right: calc(100% - "30px");
+}
+
+main.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:20px;
+}
+.col header.title{
+    font-family: helvetica;
+    color:#F7BB0E;
+    padding: 0px 0px 20px 30px;
+
+}
+.col .certification{
+    padding: 0px 30px ;
+    border-left: 2px solid #bababa;
+}
+
+.col .certification .formt-box{
+    position: relative;
+    padding: 50px;
+    width: 70vh;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+.col .certification .formt-box:hover{
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+.col .certification .formt-box::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+     border-radius: 50%;
+    right: calc(100% + 22px );
+    top: 0;
+    background-color:#F49366;
+    border: 2px solid white;
+}
+
+.formt-box h4{
+    position: relative;
+    color:#F7BB0E;
+}
+
+.formt-box h3{
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: helvetica;
+    color: #303C6C;
+}
+.formt-box p{
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+@media(max-width: 768px){
+    main.row{
+        grid-template-columns: 1fr;
+    }
+    .row .col:nth-child(2){
+        margin-top: 30px;
+    }
+}
+
+</style>
+
+
+
+                           <!-- A propos page
+                :  --------------------------------------->
+
+                <h1 style="text-align:center;color: #F7BB0E;
+                font-size: 40px;">
+                    A PROPOS  </h1>
+               <div class="form-cert">
+               <section id="Formations/Certifications">
+               
+                <div class="formation">
+                    <main class="row">
+                        <!--  Education section  starts-->
+            
+                        <section class="col">
+                           <header class="title">
+                           </header>
+                           <div class="certification">
+                            <div class="formt-box">
+                                <h4>TONTINE VOITURE</h4>
+                                <h3>Chaque semaine et Chaque Mois</h3>
+                                <p>
+                                    Une tontine voiture est une forme de co-propriété où un groupe
+                                    de personnes contribue financièrement à l'achat d'une voiture, 
+                                    puis utilisent un système de tontine pour déterminer qui l'utilisera
+                                    à quel moment. Chaque participant paie une certaine somme d'argent régulièrement
+                                    dans un fonds commun. 
+                                </p>
+                            </div>
+                                  
+                            <div class="formt-box">
+                                <h4>TONTINE En Emeraire ou (L'argent Cash)</h4>
+                                <h3></h3>
+                                <p>
+                                    La tontine est une forme de placement financier où
+                                     un groupe de personnes investit de l'argent dans un pot commun,
+                                      et lorsque l'un des membres décède, sa part est répartie entre 
+                                      les membres survivants au lieu de revenir à sa succession. 
+                                </p>
+                            </div>
+                                
+                            <div class="formt-box">
+                                <h4>TONTINE MOTO</h4>
+                                <h3>Participation Chaque Mois</h3>
+                                <p>
+                                La tontine moto fonctionne sur le même principe que la tontine 
+                                traditionnelle, mais elle est spécifiquement axée sur la propriété et 
+                                l'utilisation partagée d'une moto. Un groupe de personnes intéressées par 
+                                la possession d'une moto peut contribuer financièrement à l'achat initial de 
+                                celle-ci. Ensuite, un accord est établi pour déterminer l'ordre dans lequel 
+                                les participants utiliseront la moto.
+
+
+                                </p>
+                            </div>
+                           </div>
+                        </section>
+                          
+                        <section class="col">
+                            <header class="title">
+                             
+                            </header>
+                            <div class="certification">
+                             <div class="formt-box">
+                                 <h4>TONTINE HABILLEMENT</h4>
+                                 <h3>Participation Chaque jours</h3>
+                                 <p>
+                                   
+                                Une tontine habillement est une forme spécifique de tontine 
+                                où un groupe de personnes contribue financièrement à un fonds 
+                                commun pour l'achat de vêtements. Les participants peuvent convenir 
+                                d'un montant régulier à verser dans le pot commun. Ensuite, selon un 
+                                calendrier convenu, chaque participant reçoit la possibilité d'utiliser 
+                                le fonds commun pour acheter des vêtements pour lui-même ou pour ses proches.
+                                 </p>
+                             </div>
+             
+                             <div class="formt-box">
+                                 <h4>TONTINE MAISON</h4>
+                                 <h3>Participation Chaque Mois</h3>
+                                 <p>
+                                    Une tontine maison est une méthode de propriété partagée où 
+                                    un groupe de personnes contribue financièrement à l'achat d'une maison. 
+                                    Contrairement à une copropriété traditionnelle où chaque personne 
+                                    possède une part de la propriété, dans une tontine maison, 
+                                    les participants s'accordent pour partager l'usage de la maison 
+                                    pendant des périodes spécifiques.
+                                 </p>
+                             </div>
+                                 
+                             <div class="formt-box">
+                                 <h4>TONTINE PORTABLE OU ORDINATEUR</h4>
+                                 <h3>Participation par jours ou pay par Transche</h3>
+                                 <p>
+                                    La notion de tontine appliquée aux téléphones ou aux ordinateurs
+                                     pourrait être un arrangement informel où un groupe de personnes 
+                                contribue financièrement à l'achat d'un téléphone ou d'un ordinateur,
+                                et ensuite les utilise en rotation ou selon un calendrier déterminé.
+                                 </p>
+                             </div>
+                             
+                    
+                            </div>
+                         </section>
+                    </main>
+                </div>
+            </section>
+        </div>
+
+
+
+{% endblock %}
+
+
+
+
+

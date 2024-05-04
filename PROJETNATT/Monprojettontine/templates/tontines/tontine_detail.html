@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+   <!--  -->
+{% block contenu%}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau HTML avec Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>{{ tontine.nom }}</h2>
+
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Montant Cottisation</th>
+                <th scope="col">Description</th>
+                <th scope="col">Frequence Paiement</th>
+                <th scope="col">Date debut</th>
+                <th scope="col">Date Fin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ tontine.cotisation_amount }}</td>
+                <td>{{ tontine.description }}</td>
+                <td>{{ tontine.frequence_paiement }}</td>              
+                <td>{{ tontine.date_debut }} </td>
+                <td></td>{{ tontine.date_fin }}
+            </tr>
+            
+        </tbody>
+    </table>
+   
+</div>
+<div class="mt-2">
+    <a href="#" class="btn btn-primary">Modifier</a>
+</div>
+
+</body>
+</html>
+
+{% endblock %}
+

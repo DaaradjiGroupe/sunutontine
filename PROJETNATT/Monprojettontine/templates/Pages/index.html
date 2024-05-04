@@ -1,0 +1,342 @@
+{% extends "base.html"  %} {% block contenu  %}
+{% load static %}
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #eff4f4;
+    justify-content: center;
+    align-items: center;
+}
+.detel{
+    margin-left: 1%;
+    margin-top: 15%;
+
+}
+
+.detel h1{
+    position: relative;
+    top: -80px;
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 200px;
+}
+
+span{
+    color:#FF6600;
+}
+
+.detel p{
+    position: relative;
+    color:#555;
+    line-height: 30px;
+    bottom: 42vh;
+    font-size: 24px;
+    
+}
+
+.detel a{
+    position: relative;
+    bottom: 45vh;
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5p;
+}
+
+.images{
+    width:40%;
+    height: 100%;
+    position:absolute;
+    bottom: 0;
+    right:15vh;
+
+}
+.images img{
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition:bottom 1s, left 1s;
+   
+}
+
+
+        /*    ------- Qualité Peronnelle  */
+        .quali-container{
+                position: relative;
+                bottom: 30vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 1200px;
+                flex-wrap: wrap;
+                padding: 40px 0;
+            }
+            .quali-container .quali-card{
+                position: relative;
+                min-width: 320px;
+                height: 440px;
+                box-shadow: inset  5px 5px 5px rgba(0,0,0, 0.05),
+                            inset -5px -5px 5px rgba(255,255,255,0.5),
+                                   5px 5px 5px rgba(0,0,0,0.05),
+                                  -5px -5px 5px rgba(255,255,255,0.5);
+               border-radius:15px;
+               margin:30px;                  
+            }
+            
+            .quali-container .quali-card .quali-box{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                right: 30px;
+                bottom: 20px;
+                background-color:#ebf5fc;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+            }
+            
+                
+            
+            .quali-container .quali-card:hover .quali-box{
+                transform: translateY(-50px);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                background-image:url('{% static "images/auto.png" %}');
+            }
+            
+            .quali-container .quali-card-1:hover .quali-box{
+                transform: translateY(-50px);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                background-image:url('{% static "images/telephone.png" %}');
+            }
+            
+            .quali-container .quali-card-2:hover .quali-box{
+                transform: translateY(-50px);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                background-image:url('{% static "images/moto.png" %}');
+            }
+
+            .quali-container .quali-card-3:hover .quali-box{
+                transform: translateY(-50px);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                background-image:url('{% static "images/largent.png" %}');
+            }
+
+            .quali-container .quali-card-4:hover .quali-box{
+                transform: translateY(-50px);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                background-image:url('{% static "images/habi.png" %}');
+            }
+
+            .quali-container .quali-card-5:hover .quali-box{
+                transform: translateY(-50px);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                background-image:url('{% static "images/maison.png" %}');
+            }
+            .quali-container .quali-card .quali-box .quali-content{
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .quali-container .quali-card .quali-box .quali-content h2{
+                position: absolute;
+                top: -10px;
+                right: 30px;
+                font-size: 8em;
+                color: rgba(0, 0, 0, 0.02);
+                transition: 0.5s;
+                pointer-events: none;
+            }
+            .quali-container .quali-card:hover .quali-box .quali-content h2{
+            color: rgba(0, 0, 0, 0.05);
+            
+            }
+            .quali-container .quali-card .quali-box .quali-content h3{
+                font-size: 1.8em;
+                color: #000;
+                z-index: 1;
+                transition: 0.5s;
+            }
+            .quali-container .quali-card .quali-box .quali-content h4{
+                font-size: 1em;
+                font-weight: 300;
+                color: #000;
+                z-index: 1;
+                transition: 0.5s;
+            }
+            .quali-container .quali-card:hover .quali-box .qulai-content h3,
+            .container .card:hover .box .content h4
+            {
+                color: #000;
+            }
+            .quali-container .quali-card .quali-box .quali-content a{
+                position: relative;
+                display: inline-block;
+                padding: 8px 20px;
+                background: #03a9f4;
+                margin-top: 15px;
+                border-radius: 20px;
+                color: #000;
+                text-decoration: none;
+                font-weight: 400;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            
+            }
+            .quali-container .quali-card:hover .quali-box .quali-content a{
+                background: #777;
+                
+            }
+
+</style>
+<div class="detel">
+    <h1>BIENVENUE <span> <br> SUR NOTRE <br> APPLICATION TONTINE</span></h1>
+    <p> Un site web pour une tontine pourrait être conçu pour <br>
+        offrir une plateforme en ligne permettant aux utilisateurs <br> de participer
+        à des tontines de manière simple et sécurisée.<br> comment ce site pourrait être présenté :
+    </p>
+    <a href="#">Groupe</a>
+</div>
+
+<div class="images">
+    <img src="{% static 'images/actoe.png' %}" class="ucab">
+    <img src="{% static 'images/largent.png' %}" alt="Description de l'image">
+</div>
+    </div>
+
+
+<!----      Groupe   ---->
+                         
+<section id="qualite-personelle">
+    <h1 style="text-align:center;color:black;
+    font-size:40px; position: relative;bottom: 30vh;">
+        les Groupes Tontine </h1>
+        <div class="quali-container">
+           <div class="quali-card">
+               <div class="quali-box">
+                   <div class="quali-content">
+                       <h2>01</h2>
+                       <h3>TONTINE VOITURE </h3>
+                       <h5></h5>
+                       <h4>
+                        Une tontine voiture est une forme de 
+                        co-propriété où un groupe de personnes 
+                        contribue financièrement à l'achat d'une voiture, 
+                        puis utilisent un système de tontine pour déterminer 
+                        qui l'utilisera à quel moment. Chaque participant paie une 
+                        certaine somme d'argent régulièrement dans un fonds commun.
+                       </h4>
+                           
+                      </div>
+                  </div>
+              </div>
+           <div class="quali-card-1">
+           <div class="quali-card">
+               <div class="quali-box">
+                   <div class="quali-content">
+                       <h2>02</h2>
+                       <h3>TONTINE PORTABLE</h3>
+                       <h5>Iphone & Android</h5>
+                       <h4>
+                        La notion de tontine appliquée aux téléphones 
+                        ou aux ordinateurs pourrait être un arrangement informel 
+                        où un groupe de personnes contribue financièrement à l'achat 
+                        d'un téléphone ou d'un ordinateur, et ensuite les utilise en 
+                        rotation ou selon un calendrier déterminé.
+                       </h4>
+                           
+                      </div>
+                  </div>
+              </div>
+           </div>
+              <div class="quali-card-2">
+              <div class="quali-card">
+               <div class="quali-box">
+                   <div class="quali-content">
+                       <h2>03</h2>
+                       <h3>TONTINE MOTO</h3>
+                       <h5></h5>
+                       <h4>
+                        La tontine moto fonctionne sur le même principe 
+                        que la tontine traditionnelle, mais elle est spécifiquement 
+                        axée sur la propriété et l'utilisation partagée d'une moto
+                       </h4>
+                      </div>
+                  </div>
+              </div>
+           </div>
+
+
+           <div class="quali-card-3">
+            <div class="quali-card">
+             <div class="quali-box">
+                 <div class="quali-content">
+                     <h2>04</h2>
+                     <h3>TONTINE L'argent</h3>
+                     <h4>
+                        La tontine est une forme de placement 
+                        financier où un groupe de personnes investit de 
+                        l'argent dans un pot commun, et lorsque l'un des membres 
+                        décède, sa part est répartie entre les membres survivants 
+                        au lieu de revenir à sa succession.
+                     </h4>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="quali-card-4">
+            <div class="quali-card">
+             <div class="quali-box">
+                 <div class="quali-content">
+                     <h2>05</h2>
+                     <h3>TONTINE HABILLEMENT</h3>
+                     <h4>
+                        Une tontine habillement est une forme spécifique de 
+                        tontine où un groupe de personnes contribue financièrement 
+                        à un fonds commun pour l'achat de vêtements. Les participants 
+                        peuvent convenir d'un montant régulier à verser dans le pot commun. 
+                        Ensuite, selon un calendrier convenu, chaque participant reçoit la 
+                        possibilité d'utiliser le fonds commun pour acheter des vêtements pour 
+                        lui-même ou pour ses proches.
+                     </h4>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="quali-card-5">
+            <div class="quali-card">
+             <div class="quali-box">
+                 <div class="quali-content">
+                     <h2>06</h2>
+                     <h3>TONTINE MAISON</h3>
+                     <h4>
+                        
+                        Une tontine maison est une méthode de propriété partagée 
+                        où un groupe de personnes contribue financièrement à l'achat 
+                        d'une maison. Contrairement à une copropriété traditionnelle où 
+                        chaque personne possède une part de la propriété, dans une tontine 
+                        maison, les participants s'accordent pour partager l'usage de la maison 
+                        pendant des périodes spécifiques.
+                     </h4>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+              </div>
+           </section>   
+
+{% endblock %}
